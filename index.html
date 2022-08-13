@@ -553,7 +553,24 @@
     
 
     
-    
+    <h2 id="模型保存与加载代码对应"><a href="#模型保存与加载代码对应" class="headerlink" title="模型保存与加载代码对应"></a>模型保存与加载代码对应</h2><ol>
+<li><p>将网络整体保存：</p>
+<ul>
+<li>保存： <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">torch.save(model,<span class="string">&#x27;model.pth&#x27;</span>)</span><br></pre></td></tr></table></figure></li>
+<li>加载： <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">model=torch.load(<span class="string">&#x27;model.pth&#x27;</span>)</span><br></pre></td></tr></table></figure>
+ 需要注意的是，因为保存的是网络的整体模型，不需要先初始化网络模型，再把参数导入：	model&#x3D;Net()此步骤不需要。</li>
+</ul>
+</li>
+<li><p>保存网络参数</p>
+<ul>
+<li>保存： <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">torch.save(model.state_dict(),<span class="string">&#x27;model.pth&#x27;</span>)</span><br></pre></td></tr></table></figure>
+ -加载： <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">torch.load_state_dict(torch.load(<span class="string">&#x27;model.pth&#x27;</span>))</span><br></pre></td></tr></table></figure>
+ 需要注意的是，因为只保存了网络的参数，因此需要先初始化网络模型，再把参数导入：model&#x3D;Net()是需要的。</li>
+</ul>
+<p> 注：<a target="_blank" rel="noopener" href="https://blog.csdn.net/zzy_pphz/article/details/104728662">参考资料</a></p>
+</li>
+</ol>
+
     
     
 
