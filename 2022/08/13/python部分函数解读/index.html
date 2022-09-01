@@ -215,7 +215,7 @@
 <meta property="og:description" content="pytorch中nn库 nn.embedding : 在RNN模型训练过程中实现词嵌入，torch.nn.embedding(vocab,d_model). vocab是单词数，d_model是词向量的维度   nn.linear : 用于设置网络中的全连接层，全连接层的输入与输出都是二维张量，不同于卷积层要求输入输出是四维张量。全连接层输入[batch_size,input_features]，">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-08-13T02:24:46.000Z">
-<meta property="article:modified_time" content="2022-08-30T03:11:45.538Z">
+<meta property="article:modified_time" content="2022-09-01T10:42:12.047Z">
 <meta property="article:author" content="ghao">
 <meta name="twitter:card" content="summary">
   
@@ -462,7 +462,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">96字</span>
+      <span class="post-count">300字</span>
     </span>
   </span>
 
@@ -496,6 +496,22 @@
 </code></pre>
 </li>
 </ol>
+</li>
+</ol>
+<h2 id="基本函数"><a href="#基本函数" class="headerlink" title="基本函数"></a>基本函数</h2><ol>
+<li><p>lambda：匿名函数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">func</span>(<span class="params">a,b</span>)</span><br><span class="line">	<span class="keyword">return</span> a+b</span><br><span class="line">func(<span class="number">2</span>,<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<p>和</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># add是一个函数</span></span><br><span class="line">add=<span class="keyword">lambda</span> a,b:a+b</span><br></pre></td></tr></table></figure>
+<p>达到同样的效果</p>
+</li>
+<li><p>torch</p>
+<ul>
+<li>torch.linspace : torch.linspace(start, end, steps&#x3D;100, out&#x3D;None) → Tensor ，返回一个1维张量，包含在区间start和end上均匀间隔的step个点，输出张量的长度由steps决定。</li>
+<li>torch.stack : outputs &#x3D; torch.stack(inputs, dim&#x3D;0) → Tensor,把多个2维的张量凑成一个3维的张量；多个3维的凑成一个4维的张量…以此类推，也就是在增加新的维度进行堆叠</li>
+<li>torch.meshgrid :  torch.meshgrid(*tensors, indexing&#x3D;None)的功能是生成网格，可以用于生成坐标。indexing可选参数为‘xy’和‘ij’</li>
+<li>torch.nn.functional.pad(input, pad, mode&#x3D;’constant’, value&#x3D;None) → Tensor，进行填充，pad参数的理解比较重要</li>
+</ul>
 </li>
 </ol>
 
@@ -663,7 +679,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#pytorch%E4%B8%ADnn%E5%BA%93"><span class="toc-number">1.</span> <span class="toc-text">pytorch中nn库</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#pytorch%E4%B8%ADnn%E5%BA%93"><span class="toc-number">1.</span> <span class="toc-text">pytorch中nn库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E5%87%BD%E6%95%B0"><span class="toc-number">2.</span> <span class="toc-text">基本函数</span></a></li></ol>
                     </div>
                 </span>
             </div>
